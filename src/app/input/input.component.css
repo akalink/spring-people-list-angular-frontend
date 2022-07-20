@@ -1,0 +1,16 @@
+#form{
+    margin: auto;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    background-color: gainsboro;
+    border-radius: 5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#btn {
+    border-radius: 80%;
+    background-color: white;
+    font-size: 2em;
+    padding: .5em;
+    
+}

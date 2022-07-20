@@ -4,7 +4,9 @@ import { Gender } from '../model/gender';
 import { GenderService } from '../service/gender.service';
 import { Ethnicity } from '../model/ethnicity';
 import { EhnicityService } from '../service/ehnicity.service';
-import { NgModel } from '@angular/forms';
+
+import { asLiteral } from '@angular/compiler/src/render3/view/util';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-input',
@@ -19,7 +21,8 @@ export class InputComponent implements OnInit {
   constructor(
     private peopleService: PeopleService,
     private genderService: GenderService,
-    private ethnicityService: EhnicityService
+    private ethnicityService: EhnicityService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -34,6 +37,7 @@ export class InputComponent implements OnInit {
     this.peopleService.postPerson(person).subscribe({
       next: (data) => {
         console.log(data);
+        this.router.navigate(['/people'])
       }
     })
   }
@@ -43,6 +47,9 @@ export class InputComponent implements OnInit {
         
         this.genders = data;
         console.log(this.genders);
+      },
+      error: (err: any) => {
+        console.log("Error, did not post person");
       }
     })
   }

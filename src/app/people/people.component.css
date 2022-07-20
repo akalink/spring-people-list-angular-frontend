@@ -2,3 +2,12 @@
 #t1 {
     text-align: center;
 }
+#form{
+    margin: auto;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    background-color: gainsboro;
+    border-radius: 5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

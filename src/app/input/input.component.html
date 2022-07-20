@@ -1,9 +1,10 @@
-<p>input works!</p>
+<div id="form">
+    <br>
 <div>
-    <label>Full Name</label>
+    <label>Full Name</label> <br>
     <input type="text" name="fullName" id="fullName" #fullName></div>
 <div></div>
-    <label>Age</label>
+    <label>Age</label> <br>
     <input type="number" name="age" id="age" #age>
 <div>
     <label><h3>Gender</h3></label>
@@ -24,5 +25,7 @@
     </div>
 </div>
 <div>
-    <button type="button" (click)="postPerson(fullName.value,age.value)">Submit</button>
+    <br>
+    <button class="btn" type="button" (click)="postPerson(fullName.value,age.value)">Submit</button>
+</div>
 </div>
