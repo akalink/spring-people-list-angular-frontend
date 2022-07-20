@@ -1,10 +1,10 @@
 <p>input works!</p>
 <div>
     <label>Full Name</label>
-    <input></div>
+    <input type="text" name="fullName" id="fullName" #fullName></div>
 <div></div>
     <label>Age</label>
-    <input type="number">
+    <input type="number" name="age" id="age" #age>
 <div>
     <label><h3>Gender</h3></label>
     <div *ngFor="let gen of genders">
@@ -24,5 +24,5 @@
     </div>
 </div>
 <div>
-    <button type="button">Submit</button>
+    <button type="button" (click)="postPerson(fullName.value,age.value)">Submit</button>
 </div>

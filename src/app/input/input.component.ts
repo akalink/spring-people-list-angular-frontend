@@ -26,10 +26,11 @@ export class InputComponent implements OnInit {
     this.getGender();
     this.getEthnicity();
   }
-  postPerson(){
+  postPerson(fullName: String, age:any){
+    console.log(age);
     let gender = [];
     let ethnicity = [];
-    let person = {};
+    const person = {fullName, age, gender: this.gen, ethnicity : this.eth};
     this.peopleService.postPerson(person).subscribe({
       next: (data) => {
         console.log(data);
