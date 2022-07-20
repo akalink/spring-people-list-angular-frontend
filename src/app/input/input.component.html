@@ -1,5 +1,28 @@
 <p>input works!</p>
-<label>Full Name</label>
-<input>
-<label>Age</label>
-<input type="number">
+<div>
+    <label>Full Name</label>
+    <input></div>
+<div></div>
+    <label>Age</label>
+    <input type="number">
+<div>
+    <label><h3>Gender</h3></label>
+    <div *ngFor="let gen of genders">
+        <span>
+            <label>{{gen.genderType}}</label>
+            <input type="radio" name="gender" value={{gen.id}} checked="true" (change)="onChangeGen(gen.id, gen.genderType)">
+        </span>
+    </div>
+</div>
+<div>
+    <label><h3>Ethnicity</h3></label>
+    <div *ngFor="let eth of ethnicity">
+        <span>
+            <label>{{eth.ethnicityType}}</label>
+            <input type="radio" name="ethnicity" value={{eth.id}} checked="true" (change)="onChangeEth(eth.id, eth.ethnicityType)" >
+        </span>
+    </div>
+</div>
+<div>
+    <button type="button">Submit</button>
+</div>

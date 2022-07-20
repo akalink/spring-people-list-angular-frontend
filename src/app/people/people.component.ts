@@ -17,7 +17,7 @@ export class PeopleComponent implements OnInit {
 
   getPeople(){
     this.people = [];
-    this.peopleService.GetPeople().subscribe({
+    this.peopleService.getPeople().subscribe({
       next: (data) => {
         this.people = data;
         

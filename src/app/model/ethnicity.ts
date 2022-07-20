@@ -1,4 +1,4 @@
 export interface Ethnicity {
     id: number;
-    ethnicityType: string;
+    ethnicityType: String;
 }
